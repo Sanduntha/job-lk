@@ -4,15 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrainerDto {
+public class EnrollmentDto {
     private Integer id;
-    private String name;
-    private String courseCategory;
-    private String contactNumber;
-    private String qualification;
-    private Integer experience;
+    private Integer courseId;
+    private Integer jobSeekerId;
+    private LocalDate date;
+    private Double amount;
 }
-

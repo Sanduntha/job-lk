@@ -16,7 +16,7 @@ public class ApplicationController {
     private final ApplicationService applicationService;
 
     // Apply for a job
-    @PostMapping
+    @PostMapping("/apply")
     public ResponseEntity<ApplicationDto> applyForJob(@RequestBody ApplicationDto applicationDto) {
         ApplicationDto savedApplication = applicationService.applyForJob(applicationDto);
         return ResponseEntity.ok(savedApplication);

@@ -21,14 +21,14 @@ public class JobSeekerController {
     }
 
     // Create a new Job Seeker
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<JobSeeker> createJobSeeker(@RequestBody JobSeeker jobSeeker) {
         JobSeeker created = jobSeekerService.createJobSeeker(jobSeeker);
         return ResponseEntity.ok(created);
     }
 
     // Get all Job Seekers
-    @GetMapping
+    @GetMapping("/view")
     public ResponseEntity<List<JobSeeker>> getAllJobSeekers() {
         List<JobSeeker> seekers = jobSeekerService.getAllJobSeekers();
         return ResponseEntity.ok(seekers);

@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrainerDto {
-    private Integer id;
-    private String name;
-    private String courseCategory;
-    private String contactNumber;
-    private String qualification;
-    private Integer experience;
-}
+public class CourseDto {
 
+    private Integer id;
+    private String title;
+    private Integer duration;
+    private Double fee;
+    private String description;
+    private Integer trainerId;
+}
