@@ -4,14 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobDto {
+public class EmployerDto {
     private Integer id;
-    private String title;
-    private String description;
-    private String location;
-    private Double salary;
-    private Integer employerId;
+    private String name;
+    private String address;
+    private String contactNumber;
+    private List<JobDto> jobs;
 }

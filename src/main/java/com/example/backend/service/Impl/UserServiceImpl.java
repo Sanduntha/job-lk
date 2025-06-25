@@ -4,9 +4,11 @@ import com.example.backend.dto.LoginData;
 import com.example.backend.dto.UserDto;
 import com.example.backend.dto.UserDtoReturn;
 import com.example.backend.entity.User;
+import com.example.backend.repo.JobRepo;
 import com.example.backend.repo.UserRepo;
 import com.example.backend.service.UserService;
 import com.example.backend.util.JWTTokenGenerator;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +16,15 @@ import java.util.Base64;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
     private final UserRepo userRepo;
-    private JWTTokenGenerator jwtTokenGenerator;
+    private final JWTTokenGenerator jwtTokenGenerator;
 
-    @Autowired
+//    @Autowired
+//    private JobRepo jobRepo;
+
+    @Autowired //dependency inject karana eka
     public UserServiceImpl(UserRepo userRepo, JWTTokenGenerator jwtTokenGenerator) {
         this.userRepo = userRepo;
         this.jwtTokenGenerator = jwtTokenGenerator;
