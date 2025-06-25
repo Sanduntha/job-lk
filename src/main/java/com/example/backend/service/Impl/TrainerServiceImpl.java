@@ -47,4 +47,5 @@ public class TrainerServiceImpl implements TrainerService {
                 .map(trainer -> modelMapper.map(trainer, TrainerDto.class))
                 .collect(Collectors.toList());
     }
+
 }

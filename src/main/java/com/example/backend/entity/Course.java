@@ -22,7 +22,8 @@ public class Course {
     private Double fee;
     private String description;
 
-    @ManyToOne @JoinColumn(name = "trainer_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "trainer_id", nullable = false)
     private Trainer trainer;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
