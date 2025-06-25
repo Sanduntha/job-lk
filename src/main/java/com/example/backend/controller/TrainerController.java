@@ -1,5 +1,4 @@
 package com.example.backend.controller;
 
-public class EmployeeController {
-
+public class TrainerController {
 }

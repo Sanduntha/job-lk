@@ -9,20 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Job {
+public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-    private String description;
-    private String location;
-    private Double salary;
+    private String fileName;
+    private String filePath;
 
     @ManyToOne
-    @JoinColumn(name = "employer_id", nullable = false)
-    private Employer employer;
-
-
+    @JoinColumn(name = "profile_id")
+    private JobSeekerProfile profile;
 }
-

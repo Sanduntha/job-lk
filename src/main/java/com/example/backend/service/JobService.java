@@ -7,7 +7,7 @@ import java.util.List;
 public interface JobService {
 
     JobDto postJob(JobDto jobDto);
-    JobDto getJob(String jobId);
+    JobDto updateJob(String jobId);
     List<JobDto> listJobs();
     JobDto deleteJob(Integer jobId);
 }

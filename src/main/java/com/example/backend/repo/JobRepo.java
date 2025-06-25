@@ -8,5 +8,7 @@ import java.util.List;
 public interface JobRepo extends JpaRepository<Job, Integer> {
 
     List<Job> findByTitle(String title);
-    
+    boolean existsByIdAndEmployerId(Integer jobId, Integer employerId);
+
+    List<Job> findByEmployerId(Integer employerId);
 }
