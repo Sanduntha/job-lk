@@ -16,7 +16,6 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "INT")
     private Integer id;
-
     private String title;
     private Integer duration;
     private Double fee;
